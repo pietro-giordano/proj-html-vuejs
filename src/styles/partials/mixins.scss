@@ -1,0 +1,21 @@
+@mixin container() {
+      max-width: 1000px;
+      margin: 0 auto;
+}
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+      display: flex;
+      flex-direction: $direction;
+      justify-content: $justify;
+      align-items: $align;
+}
+
+@mixin button($padding: 10px 20px) {
+      color: white;
+      background-color: $main-green;
+      text-transform: uppercase;
+      padding: $padding;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+}
