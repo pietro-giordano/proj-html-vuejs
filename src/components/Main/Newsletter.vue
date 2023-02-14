@@ -23,16 +23,14 @@ export default {
       padding: 60;
 
       h3 {
-            font-size: 1.5rem;
+            font-size: $h3-font;
             color: $hard-grey;
             margin-bottom: 45px;
       }
 
       input {
+            @include input;
             width: 100%;
-            border: 1px solid $medium-grey;
-            padding: 12px;
-            border-radius: 5px;
       }
 
       button {

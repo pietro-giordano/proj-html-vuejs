@@ -33,7 +33,7 @@ export default {
       @include flex(column, center, center);
 
       h2 {
-            font-size: 2rem;
+            font-size: $h2-font;
       }
 
       p {

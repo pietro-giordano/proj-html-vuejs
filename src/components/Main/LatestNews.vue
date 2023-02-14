@@ -57,16 +57,20 @@ export default {
 .container {
       @include container;
       position: relative;
-      top: -30px;
+      bottom: 30px;
 
       .latest {
             @include flex(column, center, center);
             background-color: white;
             padding: 60px 50px 10px;
             width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-top: 5px solid $metal-grey;
+            box-shadow: $box-shadow-hard;
 
             h2 {
-                  font-size: 2rem;
+                  font-size: $h2-font;
                   color: $hard-grey;
                   text-align: center;
                   margin-bottom: 50px;

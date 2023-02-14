@@ -34,3 +34,9 @@
       border-radius: 25px;
       cursor: pointer;
 }
+
+@mixin input {
+      border: 1px solid $medium-grey;
+      padding: 12px;
+      border-radius: 5px;
+}

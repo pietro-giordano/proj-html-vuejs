@@ -1,4 +1,5 @@
 <script>
+import FirstLesson from './FirstLesson.vue';
 import Testimonials from './Testimonials.vue';
 import Newsletter from './Newsletter.vue';
 import LatestNews from './LatestNews.vue';
@@ -6,6 +7,7 @@ import LatestNews from './LatestNews.vue';
 export default {
       name: 'AppMain',
       components: {
+            FirstLesson,
             Testimonials,
             Newsletter,
             LatestNews,
@@ -55,6 +57,9 @@ export default {
 </script>
 
 <template>
+      <section id="first-lesson">
+            <FirstLesson />
+      </section>
 
       <section id="testimonials">
             <Testimonials :testimonial="testimonial" v-for="testimonial in testimonials" />
