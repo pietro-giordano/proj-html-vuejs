@@ -3,7 +3,40 @@ export default {
       name: 'AppFooter',
       data() {
             return {
+                  contacts: [
+                        {
+                              contact: '12345 North Main Street, New York, NY 555555',
+                              url: '',
 
+                        }, {
+                              contact: '1.800.555.6789',
+                              url: '',
+
+                        }, {
+                              contact: 'info@your-domain.com',
+                              url: '',
+
+                        }, {
+                              contact: 'Theme-Fusion.com',
+                              url: '',
+
+                        },
+                  ],
+                  courses: [
+                        {
+                              name: 'Pass Plus',
+                              url: '',
+                        }, {
+                              name: 'Intensive Course',
+                              url: '',
+                        }, {
+                              name: 'Automatic',
+                              url: '',
+                        }, {
+                              name: 'Instructor training',
+                              url: '',
+                        },
+                  ]
             }
       }
 }
@@ -18,16 +51,28 @@ export default {
                               course, or the brand new driver wanting to pass first time.</p>
                   </div>
 
-                  <div>
-
+                  <div class="contacts">
+                        <h4>Contact details</h4>
+                        <ul>
+                              <li v-for="contact in contacts">
+                                    <font-awesome-icon icon="fa-solid fa-house-chimney" />
+                                    <a :href="contact.url">{{ contact.contact }}</a>
+                              </li>
+                        </ul>
                   </div>
 
-                  <div>
-
+                  <div class="courses">
+                        <h4>Courses</h4>
+                        <ul>
+                              <li v-for="course in courses">
+                                    <font-awesome-icon icon="fa-regular fa-circle-right" />
+                                    <a :href="course.url">{{ course.name }}</a>
+                              </li>
+                        </ul>
                   </div>
 
-                  <div>
-                        <img src="../../assets/footer-ad-grid-200x178.png" alt="">
+                  <div class="grid">
+                        <img src="../../assets/footer-ad-grid-400x357.png" alt="">
                         <button>book now</button>
                   </div>
             </div>
@@ -65,28 +110,79 @@ footer {
 
       .footer-up {
             @include container;
-            @include flex;
-            height: 400px;
+            @include flex(row, space-between);
+            padding: 60px 0;
 
             div {
-                  width: calc(100% / 4);
-                  border: 2px solid black;
-                  font-size: $little-font;
+                  width: calc((100% / 4) - 20px);
                   color: $medium-grey;
+                  line-height: 1.3rem;
 
-                  img {
-                        display: block !important;
-                        width: 100%;
+                  &:first-child {
+                        font-size: $little-font;
                   }
 
-                  button {
-                        @include button;
+                  &:first-child img {
+                        width: 80%;
+                  }
+
+                  &.contacts,
+                  &.courses {
+
+                        li {
+                              margin: 8px 0;
+                              @include flex;
+
+                              a {
+                                    padding-left: 10px;
+
+                                    &:hover {
+                                          text-decoration: underline;
+                                    }
+                              }
+                        }
+                  }
+
+                  &.contacts {
+                        a {
+                              color: $medium-grey;
+                              font-size: $little-font;
+                        }
+                  }
+
+                  &.courses {
+                        color: $main-green;
+
+                        a {
+                              color: $main-green;
+                              font-size: $medium-font;
+                        }
+                  }
+
+                  &.grid {
+                        @include flex(column, flex-start, center);
+
+                        img {
+                              width: 100%;
+                              margin-bottom: 20px;
+                        }
+
+                        button {
+                              @include button;
+                        }
+                  }
+
+                  h4 {
+                        font-size: $medium-font;
+                        text-transform: uppercase;
+                        color: white;
+                        margin-bottom: 1rem;
                   }
             }
       }
 
       .footer-down {
-            height: 120px;
+            padding: 50px 0;
             background-color: black;
 
             div {
