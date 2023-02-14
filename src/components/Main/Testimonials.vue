@@ -22,18 +22,41 @@ export default {
                   <img :src="getImgPath(`../../assets/${testimonial.photo}`)" alt="">
             </div>
 
-            <p>{{ testimonial.text }}</p>
-            <p>{{ testimonial.name }}</p>
+            <p class="text">{{ testimonial.text }}</p>
+            <p class="name">{{ testimonial.name }}</p>
       </div>
 
 </template>
 
 <style lang="scss">
 .testimonials {
-      @include container;
+      @include container(600px);
       @include flex(column, center, center);
 
+      h2 {
+            font-size: 2rem;
+      }
+
+      p {
+            color: $medium-grey;
+            padding: 15px;
+
+            &.text {
+                  font-style: italic;
+                  font-size: 0.8rem;
+                  letter-spacing: 3px;
+                  text-align: center;
+            }
+
+            &.name {
+                  font-weight: bold;
+                  font-size: 0.8rem;
+                  letter-spacing: 2px;
+            }
+      }
+
       &-photo {
+            margin: 25px 0 10px;
             width: 100px;
             height: 100px;
 

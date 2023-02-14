@@ -67,17 +67,18 @@ export default {
 #testimonials {
       @include bg-image('../../assets/testimonial-background.jpg');
       @include flex(column, center, center);
-      height: 400px;
+      height: 600px;
 
       .point-container {
             @include flex(row, center);
 
             .point {
-                  width: 20px;
-                  height: 20px;
+                  width: 10px;
+                  height: 10px;
                   border-radius: 50%;
                   border: 1px solid $medium-grey;
                   cursor: pointer;
+                  margin: 5px;
 
                   &.point-selected {
                         background-color: $medium-grey;
