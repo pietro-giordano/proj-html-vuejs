@@ -99,7 +99,7 @@ header {
 
                   p {
                         color: $medium-grey;
-                        font-size: 0.6rem;
+                        font-size: $little-font;
                         line-height: 35px;
                   }
             }
@@ -124,7 +124,7 @@ header {
                                     font-weight: bold;
                                     color: white;
                                     padding: 5px 0;
-                                    font-size: 0.8rem;
+                                    font-size: $medium-font;
                                     margin-right: 35px;
 
                                     &.active {
@@ -134,7 +134,7 @@ header {
 
                                     span {
                                           background-color: $main-green;
-                                          font-size: 0.6rem;
+                                          font-size: $little-font;
                                           padding: 3px;
                                           border-radius: 5px;
                                     }
@@ -159,7 +159,7 @@ header {
             }
 
             h1 {
-                  font-size: 3rem;
+                  font-size: $biggest-font;
             }
 
             p {

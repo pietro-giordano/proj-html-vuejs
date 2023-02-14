@@ -43,22 +43,22 @@ export default {
 
             &.text {
                   font-style: italic;
-                  font-size: 0.8rem;
+                  font-size: $medium-font;
                   letter-spacing: 3px;
                   text-align: center;
             }
 
             &.name {
                   font-weight: bold;
-                  font-size: 0.8rem;
+                  font-size: $medium-font;
                   letter-spacing: 2px;
             }
       }
 
       &-photo {
-            margin: 25px 0 10px;
-            width: 100px;
-            height: 100px;
+            margin: 25px 0 15px;
+            width: 120px;
+            height: 120px;
 
             img {
                   width: 100%;
