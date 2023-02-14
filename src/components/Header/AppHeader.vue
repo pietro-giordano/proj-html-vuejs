@@ -1,21 +1,86 @@
 <script>
 import AppNav from './AppNav.vue';
-import AppJumbotron from './AppJumbotron.vue';
 
 export default {
       name: 'AppHeader',
       components: {
-            AppNav,
-            AppJumbotron
+            AppNav
+      },
+      data() {
+            return {
+                  navLinks: [
+                        {
+                              name: 'home',
+                              url: '#',
+                              selected: true,
+                              new: false
+                        }, {
+                              name: 'about',
+                              url: '#',
+                              selected: false,
+                              new: false
+                        }, {
+                              name: 'prices',
+                              url: '#',
+                              selected: false,
+                              new: false
+                        }, {
+                              name: 'courses',
+                              url: '#',
+                              selected: false,
+                              new: true
+                        }, {
+                              name: 'location',
+                              url: '#',
+                              selected: false,
+                              new: false
+                        }, {
+                              name: 'blog',
+                              url: '#',
+                              selected: false,
+                              new: false
+                        },
+                  ],
+            }
       }
 }
 </script>
 
 <template>
       <header>
-            <AppNav />
+            <div class="phone-contact">
+                  <div class="container">
+                        <p>We have a 95% Successful Pass Rate!</p>
 
-            <AppJumbotron />
+                        <p>
+                              <span><font-awesome-icon icon="fa-solid fa-phone-flip" /></span>
+                              Give has a call to book your tuition! 1-800-555-555
+                        </p>
+                  </div>
+            </div>
+
+            <div class="nav-bar">
+                  <div class="container">
+                        <div>
+                              <img src="../../assets/avada-drivers-logo-2x-200x39.png" alt="Avada Logo">
+                        </div>
+
+                        <div>
+                              <ul>
+                                    <AppNav :link="link" v-for="link in navLinks" />
+                              </ul>
+
+                              <button>
+                                    book now
+                              </button>
+                        </div>
+                  </div>
+            </div>
+
+            <div class="jumbotron">
+                  <h1>Drive with Avada</h1>
+                  <p>We offer the finest driving tuition money can buy</p>
+            </div>
       </header>
 </template>
 
