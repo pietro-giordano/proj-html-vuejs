@@ -1,12 +1,14 @@
 <script>
 import Testimonials from './Testimonials.vue';
 import Newsletter from './Newsletter.vue';
+import LatestNews from './LatestNews.vue';
 
 export default {
       name: 'AppMain',
       components: {
             Testimonials,
             Newsletter,
+            LatestNews,
       },
       data() {
             return {
@@ -63,12 +65,16 @@ export default {
             </div>
       </section>
 
+      <section id="latest-news">
+            <LatestNews />
+      </section>
+
       <section id="newsletter">
             <Newsletter />
       </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #testimonials {
       @include bg-image('../../assets/testimonial-background.jpg');
       padding: 100px;
@@ -89,6 +95,11 @@ export default {
                   }
             }
       }
+}
+
+#latest-news {
+      @include bg-image('../../assets/latestnews-background.jpg');
+      padding-bottom: 50px;
 }
 
 #newsletter {

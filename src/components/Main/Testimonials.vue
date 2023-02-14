@@ -25,7 +25,6 @@ export default {
             <p class="text">{{ testimonial.text }}</p>
             <p class="name">{{ testimonial.name }}</p>
       </div>
-
 </template>
 
 <style lang="scss" scoped>
