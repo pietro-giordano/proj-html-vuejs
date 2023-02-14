@@ -11,8 +11,25 @@ export default {
 
 <template>
       <footer>
-            <div>
+            <div class="footer-up">
+                  <div>
+                        <img src="../../assets/avada-drivers-logo-1x.png" alt="">
+                        <p>Avada Driving School is the right choice for experienced drivers looking for a refresher
+                              course, or the brand new driver wanting to pass first time.</p>
+                  </div>
 
+                  <div>
+
+                  </div>
+
+                  <div>
+
+                  </div>
+
+                  <div>
+                        <img src="../../assets/footer-ad-grid-200x178.png" alt="">
+                        <button>book now</button>
+                  </div>
             </div>
 
             <div class="footer-down">
@@ -44,6 +61,30 @@ export default {
 
 <style lang="scss" scoped>
 footer {
+      @include bg-image('../../assets/footer-background-color.jpg');
+
+      .footer-up {
+            @include container;
+            @include flex;
+            height: 400px;
+
+            div {
+                  width: calc(100% / 4);
+                  border: 2px solid black;
+                  font-size: $little-font;
+                  color: $medium-grey;
+
+                  img {
+                        display: block !important;
+                        width: 100%;
+                  }
+
+                  button {
+                        @include button;
+                  }
+            }
+      }
+
       .footer-down {
             height: 120px;
             background-color: black;
