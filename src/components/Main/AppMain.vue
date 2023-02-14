@@ -1,10 +1,12 @@
 <script>
 import Testimonials from './Testimonials.vue';
+import Newsletter from './Newsletter.vue';
 
 export default {
       name: 'AppMain',
       components: {
             Testimonials,
+            Newsletter,
       },
       data() {
             return {
@@ -61,13 +63,15 @@ export default {
             </div>
       </section>
 
+      <section id="newsletter">
+            <Newsletter />
+      </section>
 </template>
 
 <style lang="scss" scoped>
 #testimonials {
       @include bg-image('../../assets/testimonial-background.jpg');
-      @include flex(column, center, center);
-      height: 600px;
+      padding: 100px;
 
       .point-container {
             @include flex(row, center);
@@ -85,5 +89,10 @@ export default {
                   }
             }
       }
+}
+
+#newsletter {
+      @include bg-image('../../assets/newsletter_background.jpg');
+      padding: 60px 0;
 }
 </style>

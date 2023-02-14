@@ -28,7 +28,7 @@ export default {
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .testimonials {
       @include container(600px);
       @include flex(column, center, center);
@@ -63,7 +63,6 @@ export default {
             img {
                   width: 100%;
             }
-
       }
 }
 </style>

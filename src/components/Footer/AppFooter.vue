@@ -7,19 +7,19 @@ export default {
                         {
                               contact: '12345 North Main Street, New York, NY 555555',
                               url: '',
-
+                              icon: "fa-solid fa-house-chimney"
                         }, {
                               contact: '1.800.555.6789',
                               url: '',
-
+                              icon: "fa-solid fa-phone-flip"
                         }, {
                               contact: 'info@your-domain.com',
                               url: '',
-
+                              icon: "fa-regular fa-envelope"
                         }, {
                               contact: 'Theme-Fusion.com',
                               url: '',
-
+                              icon: "fa-solid fa-link"
                         },
                   ],
                   courses: [
@@ -55,7 +55,7 @@ export default {
                         <h4>Contact details</h4>
                         <ul>
                               <li v-for="contact in contacts">
-                                    <font-awesome-icon icon="fa-solid fa-house-chimney" />
+                                    <font-awesome-icon :icon=contact.icon />
                                     <a :href="contact.url">{{ contact.contact }}</a>
                               </li>
                         </ul>
