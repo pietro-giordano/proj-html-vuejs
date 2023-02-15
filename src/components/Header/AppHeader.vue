@@ -101,6 +101,10 @@ header {
                         color: $medium-grey;
                         font-size: $little-font;
                         line-height: 35px;
+
+                        &:last-child span {
+                              padding-right: 8px;
+                        }
                   }
             }
       }

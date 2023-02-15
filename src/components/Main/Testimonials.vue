@@ -34,6 +34,7 @@ export default {
 
       h2 {
             font-size: $h2-font;
+            color: $hard-grey;
       }
 
       p {

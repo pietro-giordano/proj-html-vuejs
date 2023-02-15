@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-      <div class="container">
+      <div class="first-lesson">
             <div>
                   <h2>Get Behind The Wheel</h2>
 
@@ -35,10 +35,24 @@ export default {
                   <button>request a callback</button>
             </div>
       </div>
+
+      <div class="start-today">
+            <div class="container">
+                  <div>
+                        <h2>Start Learning to Drive Today</h2>
+                        <p>Give us a call to schedule your first driving lesson</p>
+                  </div>
+
+                  <div>
+                        <span><font-awesome-icon icon="fa-solid fa-phone-flip" /></span>
+                        1-800-555-555
+                  </div>
+            </div>
+      </div>
 </template>
 
 <style lang="scss" scoped>
-.container {
+.first-lesson {
       @include container;
       @include flex;
 
@@ -68,6 +82,7 @@ export default {
 
             &:last-child {
                   @include flex(column, flex-start, center);
+                  background-color: white;
                   width: 45%;
                   padding: 35px;
                   position: relative;
@@ -103,6 +118,35 @@ export default {
                   button {
                         @include button;
                         margin: 15px 0 20px;
+                  }
+            }
+      }
+}
+
+.start-today {
+      @include bg-image('../../assets/horizontal-cta-background.jpg');
+
+      .container {
+            @include container;
+            @include flex(row, space-between, center);
+            padding: 60px 0;
+            color: white;
+
+            h2 {
+                  font-size: $h2-font;
+            }
+
+            p {
+                  font-weight: bold;
+                  padding: 5px 0;
+            }
+
+            div:last-child {
+                  padding-right: 50px;
+                  font-size: $h3-font;
+
+                  span {
+                        padding-right: 15px;
                   }
             }
       }
