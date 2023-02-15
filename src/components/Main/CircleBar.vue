@@ -1,5 +1,11 @@
 <script>
 
+
+
+
+
+
+
 export default {
       name: 'CircleBar',
       props: {
@@ -46,15 +52,15 @@ export default {
                   height: 100%;
 
                   circle:first-child {
-                        fill: none;
+                        fill: rgba(255, 255, 255);
                         stroke: $light-grey;
-                        stroke-width: 10px;
+                        stroke-width: 10;
                   }
 
                   circle:last-child {
-                        fill: white;
+                        fill: rgba(255, 255, 255, 0);
                         stroke: $main-green;
-                        stroke-width: 10px;
+                        stroke-width: 10;
                         stroke-linecap: round;
                         transform: rotate(-90deg);
                         transform-origin: center;
