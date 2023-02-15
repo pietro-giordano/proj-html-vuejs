@@ -1,4 +1,5 @@
 <script>
+
 export default {
       name: 'CircleBar',
       props: {
@@ -25,7 +26,7 @@ export default {
                   <span>{{ data.percent }}%</span>
             </div>
             <p> {{ data.name }}</p>
-      </div>
+</div>
 </template>
 
 <style lang="scss" scoped>
@@ -47,13 +48,13 @@ export default {
                   circle:first-child {
                         fill: none;
                         stroke: $light-grey;
-                        stroke-width: 10;
+                        stroke-width: 10px;
                   }
 
                   circle:last-child {
                         fill: white;
                         stroke: $main-green;
-                        stroke-width: 10;
+                        stroke-width: 10px;
                         stroke-linecap: round;
                         transform: rotate(-90deg);
                         transform-origin: center;
