@@ -156,7 +156,10 @@ export default {
             bottom: 110px;
 
             .card-rate {
-                  border: 1px solid black;
+                  background-color: white;
+                  box-shadow: $box-shadow-light;
+                  border-top: 5px solid $main-green;
+                  border-radius: 8px;
                   width: 33%;
                   height: 300px;
             }

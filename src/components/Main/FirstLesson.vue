@@ -87,7 +87,7 @@ export default {
                   padding: 35px;
                   position: relative;
                   bottom: 30px;
-                  box-shadow: $box-shadow-medium;
+                  box-shadow: $box-shadow-light;
                   border-radius: 8px;
                   margin-bottom: 30px;
 
