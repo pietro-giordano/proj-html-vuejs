@@ -25,12 +25,12 @@
       position: fixed;
 }
 
-@mixin button($padding: 10px 20px) {
-      color: white;
-      background-color: $main-green;
-      text-transform: uppercase;
+@mixin button($padding: 10px 20px, $color: white, $background-color: $main-green, $border: none) {
       padding: $padding;
-      border: none;
+      color: $color;
+      background-color: $background-color;
+      border: $border;
+      text-transform: uppercase;
       border-radius: 25px;
       cursor: pointer;
 }

@@ -1,6 +1,28 @@
 <script>
 export default {
       name: 'Courses',
+      data() {
+            return {
+                  coursesOption: [
+                        {
+                              name: 'Pass Plus',
+                              img: 'courses-passplus-400x399.jpg'
+                        }, {
+                              name: 'Intensive Course',
+                              img: 'course-intensive-400x399.jpg'
+                        }, {
+                              name: 'Instructors',
+                              img: 'courses-instructor-400x400.jpg'
+                        },
+                  ]
+            }
+      },
+      methods: {
+
+            getImgPath: function (imgPath) {
+                  return new URL(imgPath, import.meta.url).href;
+            }
+      }
 }
 </script>
 
@@ -19,7 +41,11 @@ export default {
             </div>
 
             <div class="learn-more">
-
+                  <div class="card" v-for="card in coursesOption">
+                        <img :src="getImgPath(`../../assets/${card.img}`)" alt="">
+                        <h4>{{ card.name }}</h4>
+                        <button>learn more</button>
+                  </div>
             </div>
       </div>
 
@@ -70,9 +96,28 @@ export default {
       }
 
       .learn-more {
-            height: 300px;
+            @include flex(row, space-between);
             width: 60%;
-            border: 1px solid black;
+
+            .card {
+                  @include flex(column, flex-start, center);
+                  width: 30%;
+
+                  img {
+                        width: 100%;
+                  }
+
+                  h4 {
+                        color: $metal-grey;
+                        padding: 15px 0 10px;
+                  }
+
+                  button {
+                        @include button(8px 16px, $metal-grey, none, 3px solid $metal-grey);
+                        font-size: $little-font;
+                        font-weight: bold;
+                  }
+            }
       }
 }
 </style>
