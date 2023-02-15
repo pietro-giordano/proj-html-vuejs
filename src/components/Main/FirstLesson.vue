@@ -26,7 +26,7 @@ export default {
                   <p>When you making a block booking with us your first lesson is included free.</p>
 
                   <form action="">
-                        <input type="text" placeholder="Your Name*" required>
+                        <input type="text" id="name" placeholder="Your Name*" required>
                         <input type="email" placeholder="Email*" required>
                         <input type="tel" placeholder="Telephone">
                         <input type="text" placeholder="Location">
@@ -110,6 +110,16 @@ export default {
                         input {
                               @include input;
                               margin: 10px 0;
+                              background-color: $light-grey;
+
+                              &::placeholder {
+                                    font-size: $little-font;
+                                    color: $medium-grey;
+                              }
+
+                              &#name {
+                                    @include bg-image('../../assets/image.png', auto, 98%);
+                              }
                         }
                   }
 
