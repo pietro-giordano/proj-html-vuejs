@@ -111,7 +111,6 @@ header {
 
       .nav-bar {
             background-color: rgba($color: $hard-grey, $alpha: 0.5);
-            // @include fixed;
 
             .container {
                   @include container;

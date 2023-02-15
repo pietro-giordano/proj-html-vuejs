@@ -42,7 +42,8 @@ export default {
       <div class="instructors">
             <div class="card-instructor" v-for="(instructor, index) in instructors">
                   <div class="photo-container">
-                        <img :src="getImgPath(`../../assets/${instructor.photo}.jpg`)" :alt="instructor.name">
+                        <img :src="getImgPath(`../../assets/${instructor.photo}.jpg`)" :alt="instructor.name"
+                              :class="(index % 2 != 0) ? 'middle' : ''">
                         <span class="tooltip">{{ instructor.photo }}</span>
                   </div>
                   <h3>{{ instructor.name }}</h3>
@@ -88,7 +89,7 @@ export default {
 
 .instructors {
       @include container;
-      @include flex(row, space-between);
+      @include flex(row, space-between, flex-start);
 
       .card-instructor {
             @include card($box-shadow-medium, 5px solid $main-green);
@@ -105,6 +106,11 @@ export default {
 
                   img {
                         width: 100%;
+                        display: inline-block;
+
+                        &.middle {
+                              height: 180px;
+                        }
                   }
 
                   .tooltip {
