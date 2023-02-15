@@ -6,13 +6,13 @@ export default {
                   instructors: [
                         {
                               name: 'Mike Hart',
-                              photo: 'instructor-mikehart-600x381.jpg'
+                              photo: 'instructor-mikehart'
                         }, {
                               name: 'John Smith',
-                              photo: 'instructor-johnsmith-600x381.jpg'
+                              photo: 'instructor-johnsmith'
                         }, {
                               name: 'Angela Hart',
-                              photo: 'instructor-angelahart-600x381.jpg'
+                              photo: 'instructor-angelahart'
                         },
                   ]
             }
@@ -40,10 +40,13 @@ export default {
       </div>
 
       <div class="instructors">
-            <div class="card-instructor" v-for="instructor in instructors">
-                  <img :src="getImgPath(`../../assets/${instructor.photo}`)" :alt="instructor.name">
+            <div class="card-instructor" v-for="(instructor, index) in instructors">
+                  <div class="photo-container">
+                        <img :src="getImgPath(`../../assets/${instructor.photo}.jpg`)" :alt="instructor.name">
+                        <span class="tooltip">{{ instructor.photo }}</span>
+                  </div>
                   <h3>{{ instructor.name }}</h3>
-                  <div>
+                  <div class="instructor-contact">
                         <font-awesome-icon icon="fa-brands fa-facebook-f" />
                         <font-awesome-icon icon="fa-brands fa-twitter" />
                         <font-awesome-icon icon="fa-brands fa-instagram" />
@@ -95,18 +98,39 @@ export default {
             position: relative;
             top: 50px;
 
-            img {
+            .photo-container {
                   width: 100%;
                   padding-bottom: 25px;
+                  position: relative;
+
+                  img {
+                        width: 100%;
+                  }
+
+                  .tooltip {
+                        visibility: hidden;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        background: white;
+                        border: 1px solid black;
+                        font-size: $little-font;
+                        padding: 3px;
+                  }
+
+                  &:hover .tooltip {
+                        visibility: visible;
+                  }
             }
 
             h3 {
                   color: $hard-grey;
             }
 
-            div>* {
+            .instructor-contact>* {
                   padding: 10px;
                   color: $medium-grey;
+                  cursor: pointer;
             }
 
             p {

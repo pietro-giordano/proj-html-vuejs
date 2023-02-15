@@ -27,22 +27,22 @@ export default {
                         }, {
                               name: 'Grant Smith',
                               photo: 'testimonial-grant.png',
-                              text: 'Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.',
+                              text: 'Gestisci la tua autoscuola in modo semplice ed efficiente. La piattaforma per autoscuole ti garantisce il pieno controllo di lezioni, guide, quiz e l’organizzazione del Calendario e di ogni attività della tua scuola guida.',
                               selected: false
                         }, {
                               name: 'Harold White',
                               photo: 'testimonial-harold.png',
-                              text: 'Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.',
+                              text: 'Gli insegnanti possono fare lezione in modo interattivo, grazie a slide con quiz ministeriali correlati, manuale di teoria, schede personalizzate e statistiche per monitorare l’apprendimento.',
                               selected: false
                         }, {
                               name: 'Kate Middleton',
                               photo: 'testimonial-kate.png',
-                              text: 'Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.',
+                              text: 'Fai lezione in modo coinvolgente ed esperenziale e cattura l’attenzione dei tuoi allievi, grazie al supporto del Tagbook, il primo libro interattivo, e alle avanzate tecnologie di VR e AR, sviluppate da Guida e Vai.',
                               selected: false
                         }, {
                               name: 'Kelly Clarkson',
                               photo: 'testimonial-kelly.png',
-                              text: 'Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.',
+                              text: 'Gli insegnanti possono sbloccare gli approfondimenti video sull’App Quiz Patente Ufficiale e inviare i Messaggi Automatici per comunicare in tempo reale con gli allievi.',
                               selected: false
                         },
                   ]

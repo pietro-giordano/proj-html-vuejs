@@ -135,6 +135,10 @@ export default {
                         @include button(8px 16px, $metal-grey, none, 3px solid $metal-grey);
                         font-size: $little-font;
                         font-weight: bold;
+
+                        &:hover {
+                              @include button(8px 16px, $main-green, none, 3px solid $main-green);
+                        }
                   }
             }
       }

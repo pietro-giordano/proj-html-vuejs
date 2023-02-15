@@ -46,6 +46,7 @@ export default {
                   font-size: $medium-font;
                   letter-spacing: 3px;
                   text-align: center;
+                  height: 90px;
             }
 
             &.name {
