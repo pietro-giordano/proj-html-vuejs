@@ -83,11 +83,9 @@ export default {
 
       .courses-card {
             @include flex(column, flex-start, center);
+            @include card;
             width: 36%;
             padding: 45px 35px;
-            box-shadow: $box-shadow-medium;
-            border-radius: 8px;
-            background-color: white;
             position: relative;
             bottom: 80px;
 
@@ -156,10 +154,7 @@ export default {
             bottom: 110px;
 
             .card-rate {
-                  background-color: white;
-                  box-shadow: $box-shadow-light;
-                  border-top: 5px solid $main-green;
-                  border-radius: 8px;
+                  @include card($box-shadow-light, $border-top: 5px solid $main-green);
                   width: 33%;
                   height: 300px;
             }

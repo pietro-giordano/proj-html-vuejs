@@ -61,13 +61,10 @@ export default {
 
       .latest {
             @include flex(column, center, center);
+            @include card($box-shadow-hard, 5px solid $metal-grey, 8px 8px 0 0);
             background-color: white;
             padding: 60px 50px 10px;
             width: 100%;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            border-top: 5px solid $metal-grey;
-            box-shadow: $box-shadow-hard;
 
             h2 {
                   font-size: $h2-font;

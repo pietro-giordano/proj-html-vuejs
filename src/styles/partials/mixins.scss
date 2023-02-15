@@ -40,3 +40,10 @@
       padding: 12px;
       border-radius: 5px;
 }
+
+@mixin card($box-shadow: $box-shadow-medium, $border-top: none, $border-radius: 8px) {
+      box-shadow: $box-shadow;
+      border-top: $border-top;
+      border-radius: $border-radius;
+      background-color: white;
+}

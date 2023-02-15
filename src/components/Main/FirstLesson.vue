@@ -82,13 +82,11 @@ export default {
 
             &:last-child {
                   @include flex(column, flex-start, center);
-                  background-color: white;
+                  @include card($box-shadow-light);
                   width: 45%;
                   padding: 35px;
                   position: relative;
                   bottom: 30px;
-                  box-shadow: $box-shadow-light;
-                  border-radius: 8px;
                   margin-bottom: 30px;
 
                   h3 {

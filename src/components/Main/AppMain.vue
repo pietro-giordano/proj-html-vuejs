@@ -4,6 +4,7 @@ import Courses from './Courses.vue';
 import Testimonials from './Testimonials.vue';
 import LatestNews from './LatestNews.vue';
 import Newsletter from './Newsletter.vue';
+import Instructors from './Instructors.vue';
 
 export default {
       name: 'AppMain',
@@ -13,6 +14,7 @@ export default {
             Testimonials,
             LatestNews,
             Newsletter,
+            Instructors
       },
       data() {
             return {
@@ -59,13 +61,11 @@ export default {
 </script>
 
 <template>
-      <section id="first-lesson">
-            <FirstLesson />
-      </section>
+      <FirstLesson />
 
-      <section id="courses">
-            <Courses />
-      </section>
+      <Courses />
+
+      <Instructors />
 
       <section id="testimonials">
             <Testimonials :testimonial="testimonial" v-for="testimonial in testimonials" />
@@ -88,7 +88,7 @@ export default {
 <style lang="scss">
 #testimonials {
       @include bg-image('../../assets/testimonial-background.jpg');
-      padding: 100px;
+      padding: 150px 0 100px;
 
       .point-container {
             @include flex(row, center);
