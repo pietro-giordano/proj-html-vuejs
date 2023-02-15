@@ -14,6 +14,18 @@ export default {
                               name: 'Instructors',
                               img: 'courses-instructor-400x400.jpg'
                         },
+                  ],
+                  rate: [
+                        {
+                              name: 'pass rate',
+                              percent: '90'
+                        }, {
+                              name: 'referral rate',
+                              percent: '100'
+                        }, {
+                              name: 'accident rate',
+                              percent: '0'
+                        },
                   ]
             }
       },
@@ -56,16 +68,15 @@ export default {
             <img src="../../assets/driving-triangle.svg" alt="">
 
             <div class="container">
-                  <div class="card-rate">
-
-                  </div>
-
-                  <div class="card-rate">
-
-                  </div>
-
-                  <div class="card-rate">
-
+                  <div class="card-rate" v-for="card in rate">
+                        <div class="circle">
+                              <svg>
+                                    <circle cx="50%" cy="50%" r="45%" stroke-dasharray="3 1" stroke-dashoffset="1" />
+                                    <circle cx="50%" cy="50%" r="43%" />
+                              </svg>
+                              <span>{{ card.percent }}%</span>
+                        </div>
+                        <p> {{ card.name }}</p>
                   </div>
             </div>
       </div>
@@ -159,8 +170,51 @@ export default {
 
             .card-rate {
                   @include card($box-shadow-light, $border-top: 5px solid $main-green);
+                  @include flex(column, flex-start, center);
                   width: 33%;
-                  height: 300px;
+                  padding: 30px 0 60px;
+
+                  .circle {
+                        width: 220px;
+                        height: 220px;
+                        position: relative;
+
+                        svg {
+                              width: 100%;
+                              height: 100%;
+
+                              circle:first-child {
+                                    fill: $light-grey;
+                                    stroke: $main-green;
+                                    stroke-width: 10;
+                                    stroke-linecap: round;
+                              }
+
+                              circle:last-child {
+                                    fill: white;
+                                    stroke: $main-green;
+                                    stroke-width: none;
+                                    stroke-linecap: round;
+                              }
+                        }
+
+                        span {
+                              position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              translate: -50% -50%;
+                              color: $medium-grey;
+                              font-size: $biggest-font;
+                        }
+                  }
+
+                  p {
+                        text-transform: uppercase;
+                        color: $medium-grey;
+                        font-weight: bold;
+                        font-size: $medium-font;
+                        padding-top: 30px;
+                  }
             }
       }
 }
