@@ -28,37 +28,58 @@ export default {
 
 <template>
       <div class="courses">
-            <div class="courses-card">
-                  <img src="../../assets/new-corner.jpg" alt="">
+            <div class="container">
+                  <div class="courses-card">
+                        <img src="../../assets/new-corner.jpg" alt="">
 
-                  <h2>Courses</h2>
+                        <h2>Courses</h2>
 
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi esse quaerat,
-                        voluptatibus dolores iusto ratione excepturi tempore, et natus voluptatem facilis rerum quisquam
-                        delectus.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi esse quaerat,
+                              voluptatibus dolores iusto ratione excepturi tempore, et natus voluptatem facilis rerum
+                              quisquam
+                              delectus.</p>
 
-                  <button>course information</button>
-            </div>
+                        <button>course information</button>
+                  </div>
 
-            <div class="learn-more">
-                  <div class="card" v-for="card in coursesOption">
-                        <img :src="getImgPath(`../../assets/${card.img}`)" alt="">
-                        <h4>{{ card.name }}</h4>
-                        <button>learn more</button>
+                  <div class="learn-more">
+                        <div class="card" v-for="card in coursesOption">
+                              <img :src="getImgPath(`../../assets/${card.img}`)" alt="">
+                              <h4>{{ card.name }}</h4>
+                              <button>learn more</button>
+                        </div>
                   </div>
             </div>
       </div>
 
       <div class="rate">
+            <img src="../../assets/driving-triangle.svg" alt="">
 
+            <div class="container">
+                  <div class="card-rate">
+
+                  </div>
+
+                  <div class="card-rate">
+
+                  </div>
+
+                  <div class="card-rate">
+
+                  </div>
+            </div>
       </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .courses {
-      @include container;
-      @include flex(row, space-between);
-      padding: 60px 0;
+      @include bg-image('../../assets/promise-background.jpg', cover, bottom);
+
+      .container {
+            @include container;
+            @include flex(row, space-between);
+            padding: 60px 0;
+      }
 
       .courses-card {
             @include flex(column, flex-start, center);
@@ -117,6 +138,27 @@ export default {
                         font-size: $little-font;
                         font-weight: bold;
                   }
+            }
+      }
+}
+
+.rate {
+
+      img {
+            width: 100%;
+            height: 100px;
+      }
+
+      .container {
+            @include container;
+            @include flex(row, space-between);
+            position: relative;
+            bottom: 110px;
+
+            .card-rate {
+                  border: 1px solid black;
+                  width: 33%;
+                  height: 300px;
             }
       }
 }

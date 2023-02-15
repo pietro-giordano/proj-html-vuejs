@@ -86,10 +86,6 @@ export default {
 </template>
 
 <style lang="scss">
-#courses {
-      @include bg-image('../../assets/promise-background.jpg');
-}
-
 #testimonials {
       @include bg-image('../../assets/testimonial-background.jpg');
       padding: 100px;
